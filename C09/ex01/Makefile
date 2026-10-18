@@ -1,0 +1,33 @@
+# Variables
+SRC = ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
+PRE = ./srcs/
+SRCS = ${addprefix ${PRE}, ${SRC}}
+OBJS = ${SRCS:.c=.o}
+HEAD = ./includes/
+NAME = libft.a
+AR = ar rc
+RM = rm -f
+LIB = ranlib
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+
+# Rules
+all:	${NAME}
+.c.o:
+	${CC} ${CFLAGS} -c -I ${HEAD} $< -o ${<:.c=.o}
+${NAME}:	${OBJS}
+				${AR} ${NAME} ${OBJS}
+				${LIB} ${NAME}
+
+
+# Cleaners
+clean:
+			${RM} ${OBJS}
+fclean:		clean
+				${RM} ${NAME}
+re:			fclean all
+
+
+# Protector
+.PHONY:		all clean fclean re
