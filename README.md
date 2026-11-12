@@ -83,7 +83,7 @@ You can also practice on **LeetCode** or **Codewars** to improve your problem-so
 
 >Do not copy solutions directly.  
 >Try solving exercises yourself first, then compare.  
->For any questions: Discord username **113i14e**
+>For any questions: Discord username **metaplasticity**
 >
  <p align="center">
   <img src="https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white">
